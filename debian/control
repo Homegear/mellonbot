@@ -1,0 +1,13 @@
+Source: mellonbot
+Maintainer: Dr. Sathya Laufer <s.laufer@homegear.email>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 8), libhomegear-base (= <BASELIBVER>), libgcrypt20-dev, libgpg-error-dev (>= 1.10), libgnutls28-dev, libgpgme-dev
+Homepage: https://homegear.eu
+
+Package: mellonbot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libhomegear-base (= <BASELIBVER>), libgcrypt20, libgnutlsxx28, libgpg-error0 (>= 1.10), libgpgme11, procps
+Description: Client to renew certificates using the ib symphony Mellon CA.
+ Client to renew certificates using the ib symphony Mellon CA.

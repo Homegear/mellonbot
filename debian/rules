@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+override_dh_auto_install:
+	dh_auto_install
+
+	mkdir -p $(CURDIR)/debian/mellonbot/etc/mellon
+	chmod 755 $(CURDIR)/debian/mellonbot/etc/mellon
+
+	mkdir -p $(CURDIR)/debian/mellonbot/etc/cron.d
+	cp $(CURDIR)/misc/System\ Config/cron $(CURDIR)/debian/mellonbot/etc/cron.d/mellon
+	chown root:root $(CURDIR)/debian/mellonbot/etc/cron.d/mellon
+	chmod 644 $(CURDIR)/debian/mellonbot/etc/cron.d/mellon
+
+override_dh_strip:
+	dh_strip --dbg-package=mellonbot
+
+%:
+	dh $@ --parallel
