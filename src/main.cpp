@@ -665,7 +665,7 @@ int main(int argc, char *argv[]) {
         exit(1);
       }
 
-      std::cout << private_key << " " << std::endl;
+      std::cout << private_key;
       std::fill(private_key.begin(), private_key.end(), 0);
 
       auto certData = BaseLib::Io::getFileContent(certificateFile);
