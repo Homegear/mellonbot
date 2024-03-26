@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <mutex>
+#include <array>
 
 #include <gnutls/gnutls.h>
 #include <gnutls/x509.h>

@@ -103,7 +103,6 @@ int GnuTls::createPrivateKeyAndCsrInMemory(const std::string &dn, std::string &p
   if (bufferSize > buffer.size()) bufferSize = buffer.size();
   private_key.reserve(bufferSize + 1);
   private_key.insert(private_key.end(), buffer.begin(), buffer.begin() + bufferSize);
-  if (private_key.back() != '\0') private_key.push_back('\0');
   std::fill(buffer.begin(), buffer.end(), 0);
 
   gnutls_x509_crq_t crq;
