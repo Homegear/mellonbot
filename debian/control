@@ -8,6 +8,6 @@ Homepage: https://homegear.eu
 
 Package: mellonbot
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libhomegear-base (= <BASELIBVER>), libgcrypt20, libgnutlsxx28, libgpg-error0 (>= 1.10), libgpgme11, procps
+Depends: ${shlibs:Depends}, ${misc:Depends}, libhomegear-base (= <BASELIBVER>), libgcrypt20, libgnutls30t64 | libgnutls30, libgpg-error0 (>= 1.10), libgpgme11, procps
 Description: Client to renew certificates using the ib symphony Mellon CA.
  Client to renew certificates using the ib symphony Mellon CA.
