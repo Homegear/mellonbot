@@ -5,7 +5,7 @@ AM_LDFLAGS = -Wl,-rpath=/lib/homegear -Wl,-rpath=/usr/lib/homegear -Wl,-rpath=/u
 
 bin_PROGRAMS = mellonbot
 mellonbot_SOURCES = main.cpp GnuTls.cpp
-mellonbot_LDADD = -lpthread -lhomegear-base -lc1-net -lz -lgcrypt -lgnutls -lgpgme
+mellonbot_LDADD = -lpthread -lhomegear-base -lc1-net -lz -lgcrypt -lgnutls -lgpgme -lcurl-gnutls
 
 if BSDSYSTEM
 else
